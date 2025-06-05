@@ -190,7 +190,3 @@ Se ha desarrollado una Web API RESTful que cumple con los requisitos funcionales
 Mediante la identificación y corrección de estos errores, el sistema garantiza la integridad y consistencia de la información, mejora la experiencia de usuario y establece una base sólida para futuras ampliaciones. La documentación con Swagger facilita pruebas y mantenimiento.
 
 La entrega incluye el código fuente con comentarios sobre errores intencionales para fines educativos y un plan claro de corrección, aportando un valioso recurso para la comprensión y mejora continua del sistema.
-
----
-
-¿Quieres que te prepare este documento en PDF o Word listo para entregar?
