@@ -30,7 +30,7 @@ El sistema debe cubrir los siguientes requisitos funcionales:
 ### 3.1 En los Modelos
 
 #### Libro.cs — Falta validación obligatoria en `Titulo`
-
+En este caso, el error presentado significa que no se validara si el titulo se encuentra con o sin texto, pudiendo generar no solo confusiones, si no que, tambien, errores a corto o largo plazo, al no haber una corección de por medio, esto podria generar horas de trabajo perdidas, en solucionar el problema desde la base de datos de la biblioteca, o podría llegar a significar evaluar manualmente el inventario fisico de libros.
 ```csharp
 public class Libro
 {
@@ -52,7 +52,7 @@ public class Libro
 ---
 
 #### Usuario.cs — Falta validación obligatoria en `Nombre`
-
+Similar al caso de arriba, en este caso el programa no validara si el usuario en cuestion posee un nombre, al trabjar solo con nombres o ID, esto puede generar confusiones a la hora de querer pedir prestado un libro, ya que se requerira obligatoriamente el nombre más el ID del usuario en cuestion, al no poseer un nombre esto podría generar confusiones o incluso problemas a largo plazo, al no saber que usuario posee cierto ID
 ```csharp
 public class Usuario
 {
@@ -70,7 +70,7 @@ public class Usuario
 ---
 
 #### Prestamo.cs — Falta validación obligatoria en `FechaPrestamo`
-
+En este error podemos observar como no se encuentra validada la fecha de prestamos, en estos casos, esto puede significar un problema mayor a los anteriores, el por qué de esta afirmación es la siguiente: al no estar guardada la fecha en la que fue prestado cierto libro, podrá generar problemas internos dentro de la organización de la biblioteca, al igual que es probable que muchos de esos libros se terminen perdiendo o, en el peor de los casos, destruyendo, generando perdidas al tener que reponerlos, esto, si lo combinamos con la falta de validcaciones de los otros problemas significaría tener que hacer un gasto de recursos humanos para revisar cada libro de manera fisica, ordenarlos, saber cuantos hay y cuantos faltan.
 ```csharp
 public class Prestamo
 {
