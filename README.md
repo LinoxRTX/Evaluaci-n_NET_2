@@ -1,8 +1,7 @@
-Por supuesto, aquí te dejo la documentación con los errores indicados claramente separados con bloques de código para que puedas pegar o agregar capturas fácilmente, y con espacios reservados para imágenes o códigos corregidos:
-
----
 
 # Documentación del Proyecto: Web API RESTful para Biblioteca Municipal “Letras Libres”
+Nombres: Vicente Lizana, 
+Fecha: 10-06-2025
 
 ## 1. Contexto Inicial
 
