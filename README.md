@@ -1,7 +1,7 @@
 
 # Documentación del Proyecto: Web API RESTful para Biblioteca Municipal “Letras Libres”
-Nombres: Vicente Lizana, 
-Fecha: 10-06-2025
+- Nombres: Vicente Lizana, 
+- Fecha: 10-06-2025
 
 ## 1. Contexto Inicial
 
