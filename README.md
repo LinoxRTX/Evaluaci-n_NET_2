@@ -87,8 +87,25 @@ public class Usuario
 }
 ```
 
-> **Espacio para agregar captura o código corregido con \[Required]**
+#### Usuario.cs - Codigo corregido
+En este caso de igual forma, se colocaron validaciones con Required, ya que en este caso se le pediran al usuario su nombre, correo y numero, arrojando un mensaje de errir si es que no se agregan estos valores en este caso, de igual modo, el id se genera automaticamente,
 
+```csharp
+public class Usuario
+{
+    public int Id { get; set; }
+
+    [Required(ErrorMessage = "El nombre es obligatorio")]
+    public string Nombre { get; set; }
+
+    [Required(ErrorMessage = "El email es obligatorio")]
+    [EmailAddress(ErrorMessage = "Email inválido")]
+    public string Email { get; set; }
+
+    [Required(ErrorMessage = "El teléfono es obligatorio")]
+    public string Telefono { get; set; }
+}
+```
 ---
 
 #### Prestamo.cs — Falta validación obligatoria en `FechaPrestamo`
