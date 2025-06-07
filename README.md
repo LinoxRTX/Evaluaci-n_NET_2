@@ -47,7 +47,29 @@ public class Libro
 }
 ```
 
-> **Espacio para agregar captura o código corregido con \[Required]**
+#### Libros.cs — Codigo Corregigo
+En este caso hemos soluciado la clase "Libro" validando los requisitos de titulo y Autor. Del mismo modo, hemos remplazado la clase.
+```csharp
+public class Libro
+{
+    public int Id { get; set; }
+
+    [Required(ErrorMessage = "El título es obligatorio")]
+    public string Titulo { get; set; }
+
+    [Required(ErrorMessage = "El autor es obligatorio")]
+    public string Autor { get; set; }
+
+    [Required(ErrorMessage = "El ISBN es obligatorio")]
+    public string ISBN { get; set; }
+
+    [Range(1000, 2100, ErrorMessage = "Año de publicación inválido")]
+    public int AnioPublicacion { get; set; }
+
+    public int UnidadesDisponibles { get; set; }
+
+    public bool Disponible => UnidadesDisponibles > 0;
+}
 
 ---
 
