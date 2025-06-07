@@ -48,7 +48,7 @@ public class Libro
 ```
 
 #### Libros.cs — Codigo Corregigo
-En este caso hemos soluciado la clase "Libro" validando los requisitos de titulo y Autor. Del mismo modo, hemos remplazado la clase.
+En este caso hemos soluciado la clase "Libro" validando los requisitos de titulo y Autor. Del mismo modo, hemos remplazado la clase, por ejemplo agregando in ISBN (Numero Estandar Internacional de Libro) con el fin de identificar los libros dentro de este caso. al igual que colocando un rango de publicación de cada libro con "AnioPublicacion", al igual que hemos agrado "UnidadesDisponibles" con el fin de validar si un libro se encuentra en stock o no, en caso de que las unidades sean 0, el libro aparecera como "Disponible: false"
 ```csharp
 public class Libro
 {
@@ -70,7 +70,7 @@ public class Libro
 
     public bool Disponible => UnidadesDisponibles > 0;
 }
-
+```
 ---
 
 #### Usuario.cs — Falta validación obligatoria en `Nombre`
