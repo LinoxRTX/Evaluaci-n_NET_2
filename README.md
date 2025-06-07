@@ -109,7 +109,7 @@ public class Usuario
 ---
 
 #### Prestamo.cs — Falta validación obligatoria en `FechaPrestamo`
-En este error podemos observar como no se encuentra validada la fecha de prestamos, en estos casos, esto puede significar un problema mayor a los anteriores, el por qué de esta afirmación es la siguiente: al no estar guardada la fecha en la que fue prestado cierto libro, podrá generar problemas internos dentro de la organización de la biblioteca, al igual que es probable que muchos de esos libros se terminen perdiendo o, en el peor de los casos, destruyendo, generando perdidas al tener que reponerlos, esto, si lo combinamos con la falta de validcaciones de los otros problemas significaría tener que hacer un gasto de recursos humanos para revisar cada libro de manera fisica, ordenarlos, saber cuantos hay y cuantos faltan.
+En este caso tenemos errores que no simplemente no se ven a primera vista, si no que, tambien, afecta su controlador, al hacer pruebas, incluso luego de corregido, se encontraban errores y bluques debido a "public Libro Libro", no solamente eso, si no que, se encontraron errores con LibroId y UsuarioId, ya que lo unico que lograba hacer era cambiar la "disponibilidad" de los libros de "True" a "False", incluso si no funcionaba.
 ```csharp
 public class Prestamo
 {
@@ -130,8 +130,18 @@ public class Prestamo
 }
 ```
 
-> **Espacio para agregar captura o código corregido con \[Required]**
-
+#### Prestamo.cs — Codigo Corregido
+Para su corrección se tuvo que realizar la clase "Prestamo" desde 0, pero, de igual modo, esta se vio beneficiada, teniendo un menor numero de lineas y retirando aquellas funciones que estaban dando error en un inicio.
+```csharp
+public class Prestamo
+{
+    public int Id { get; set; }
+    public int LibroId { get; set; }  // Solo el ID, sin propiedad de navegación
+    public int UsuarioId { get; set; } // Solo el ID, sin propiedad de navegación
+    public DateTime FechaPrestamo { get; set; } = DateTime.Now;
+    public DateTime? FechaDevolucion { get; set; }
+}
+```
 ---
 
 ### 3.2 En los Controladores
